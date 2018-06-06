@@ -25,7 +25,7 @@ rl.on('line', (line) => {
       value = line.split(",");
       buf = buf + "{\n"
       for(var i =0;i<label.length;i++){
-        buf=buf+"\""+label[i]+"\": \""+value[i]+"\"";
+        buf=buf+"  \""+label[i]+"\": \""+value[i]+"\"";
         if(i==label.length-1)
           buf = buf + "\n"
         else
