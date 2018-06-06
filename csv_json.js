@@ -39,5 +39,5 @@ rl.on('line', (line) => {
 rl.on('close',() => {
   buf=buf.substring(0,buf.length-2)
   buf=buf+'\n'+"]"
-  fs.writeFileSync(path.join(__dirname, 'file.json'), buf)
+  fs.writeFileSync(path.join(__dirname, 'customer-data.json'), buf)
 });
