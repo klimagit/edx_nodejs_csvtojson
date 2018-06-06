@@ -5,7 +5,7 @@ const path=require('path');
 var buf=''
 var value=''
 var label=''
-var first_line=false
+var first_line=true
 
 const rl = readline.createInterface({
   input: fs.createReadStream('customer-data.csv'),
@@ -15,10 +15,10 @@ const rl = readline.createInterface({
 rl.on('line', (line) => {
   //console.log(`Line from file: ${line}`);
   //buf += line + '\n'
-  if(!first_line) {
+  if(first_line) {
     label = line.split(",");
     buf="[\n"
-    first_line = true
+    first_line = false
   }
   else
     {
