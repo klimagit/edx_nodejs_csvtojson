@@ -2,10 +2,10 @@ const readline = require('readline');
 const fs = require('fs');
 const path=require('path');
 
-let buf=''
-let value=''
-let label=''
-let first_line=false
+var buf=''
+var value=''
+var label=''
+var first_line=false
 
 const rl = readline.createInterface({
   input: fs.createReadStream('customer-data.csv'),
